@@ -17,7 +17,7 @@
 
   </head>
   <body>
-    <div class="main px-4 flex flex-col lg:flex-row">
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
       <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
   <div class="lg:sticky top-0">
     <div class="sidebar-content">
@@ -31,29 +31,9 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            温故而知新
+            Catalog
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
+          <div class="toc-container hidden lg:block">
             
           </div>
         </div>
@@ -98,112 +78,65 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="latest-article text-lg text-gray-700 mb-8">
-          <i class="remixicon-article-line"></i>
-          Recent 
-        </h2>
-        
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
-    
-      <a href="https://lxykyle01.github.io/post/smart-home-project" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
-        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://lxykyle01.github.io//post-images/smart-home-project.jpg'">
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">Useful Links</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-12-28 / 2 min read
         </div>
-      </a>
-    
-    <div class="content">
-      <a href="https://lxykyle01.github.io/post/smart-home-project">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">Smart Home Project</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
         
-      </div>
-      <div class="text-gray-400 text-sm font-light">2019-12-29 / 0 min read</div>
-    </div>
-  </section>
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://lxykyle01.github.io//post-images/useful-links.jpg" alt="">
+        
+        <div class="post-content yue">
+          <div class="post-content yue">
+          <p>TensorFlow on Spark Github:<br>
+<a href="https://github.com/yahoo/TensorFlowOnSpark">https://github.com/yahoo/TensorFlowOnSpark</a></p>
+<p>Deep Learning with Apache Spark and TensorFlow:<br>
+<a href="https://databricks.com/blog/2016/01/25/deep-learning-with-apache-spark-and-tensorflow.html">https://databricks.com/blog/2016/01/25/deep-learning-with-apache-spark-and-tensorflow.html</a></p>
+<p>当Spark遇上TensorFlow分布式深度学习框架原理和实践<br>
+<a href="https://juejin.im/post/5ad4b620f265da23a04a0ad0">https://juejin.im/post/5ad4b620f265da23a04a0ad0</a></p>
+<p>Spark 随机森林算法原理、源码分析及案例实战<br>
+<a href="https://www.ibm.com/developerworks/cn/opensource/os-cn-spark-random-forest/">https://www.ibm.com/developerworks/cn/opensource/os-cn-spark-random-forest/</a></p>
+<p>Scalable-machine-learning<br>
+<a href="https://docs.huihoo.com/machine-learning/scalable-machine-learning/">https://docs.huihoo.com/machine-learning/scalable-machine-learning/</a></p>
+<h3 id="papers">Papers</h3>
+<p>Spark: Cluster Computing with Working Sets, Matei Zaharia, Mosharaf Chowdhury, Michael J. Franklin, Scott Shenker, Ion Stoica. USENIX HotCloud (2010).<br>
+<a href="http://people.csail.mit.edu/matei/papers/2010/hotcloud_spark.pdf">http://people.csail.mit.edu/matei/papers/2010/hotcloud_spark.pdf</a></p>
+<p>Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing, Matei Zaharia, Mosharaf Chowdhury, Tathagata Das, Ankur Dave, Justin Ma, Murphy McCauley, Michael J. Franklin, Scott Shenker, Ion Stoica. NSDI (2012)<br>
+<a href="https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final138.pdf">https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final138.pdf</a></p>
+<p>MLlib: Machine Learning in Apache Spark, X. Meng, J. Bradley, B. Yuvaz, E. Sparks, S. Venkataraman, D. Liu, J. Freeman, D. Tsai, M. Amde, S. Owen, D. Xin, R. Xin, M. Franklin, R. Zadeh, M. Zaharia, A. Talwalkar. Preprint (2015).<br>
+<a href="https://arxiv.org/pdf/1505.06807.pdf">https://arxiv.org/pdf/1505.06807.pdf</a></p>
 
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${1 * 0.2}s` }">
-    
-      <a href="https://lxykyle01.github.io/post/international-business-project" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
-        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://lxykyle01.github.io//post-images/international-business-project.png'">
         </div>
-      </a>
-    
-    <div class="content">
-      <a href="https://lxykyle01.github.io/post/international-business-project">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">International Business Project</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        
-      </div>
-      <div class="text-gray-400 text-sm font-light">2019-12-29 / 0 min read</div>
-    </div>
-  </section>
 
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${2 * 0.2}s` }">
-    
-      <a href="https://lxykyle01.github.io/post/iot-project" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
-        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://lxykyle01.github.io//post-images/iot-project.png'">
-        </div>
-      </a>
-    
-    <div class="content">
-      <a href="https://lxykyle01.github.io/post/iot-project">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">IoT Project</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
         
-      </div>
-      <div class="text-gray-400 text-sm font-light">2019-12-29 / 0 min read</div>
-    </div>
-  </section>
 
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${3 * 0.2}s` }">
-    
-      <a href="https://lxykyle01.github.io/post/useful-links" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
-        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://lxykyle01.github.io//post-images/useful-links.jpg'">
-        </div>
-      </a>
-    
-    <div class="content">
-      <a href="https://lxykyle01.github.io/post/useful-links">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">Useful Links</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        
-      </div>
-      <div class="text-gray-400 text-sm font-light">2019-12-28 / 2 min read</div>
-    </div>
-  </section>
 
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${4 * 0.2}s` }">
-    
-      <a href="https://lxykyle01.github.io/post/ambari" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
-        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://lxykyle01.github.io//post-images/ambari.jpg'">
-        </div>
-      </a>
-    
-    <div class="content">
-      <a href="https://lxykyle01.github.io/post/ambari">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">How to Deploy Hadoop with Ambari</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        
-      </div>
-      <div class="text-gray-400 text-sm font-light">2019-12-23 / 9 min read</div>
-    </div>
-  </section>
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="https://lxykyle01.github.io/post/iot-project">
+                <h3 class="post-title">
+                  <i class="remixicon-arrow-left-line"></i>
+                  IoT Project
+                </h3>
+              </a>
+            </div>
+          
 
-        <div class="read-more">
+          
+            <div class="next-post">
+              <a href="https://lxykyle01.github.io/post/ambari">
+                <h3 class="post-title">
+                  How to Deploy Hadoop with Ambari
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
-        <div class="index-page">
-          <div class="pagination-container animated fadeIn">
-  
-  
-</div>
 
-        </div>
+        
+
       </div>
     </div>
 

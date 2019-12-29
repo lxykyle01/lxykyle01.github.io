@@ -1,511 +1,131 @@
 <html>
   <head>
-      <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Gridea</title>
-<link rel="shortcut icon" href="http://localhost:4000/favicon.ico?v=1577622248253">
-<link rel="stylesheet" href="http://localhost:4000/styles/main.css">
 <meta name="description" content="温故而知新" />
+<link rel="shortcut icon" href="https://lxykyle01.github.io//favicon.ico?v=1577646526085">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
-<link rel="stylesheet" href="/media/fonts/iconfont.css">
-<link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://lxykyle01.github.io//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Gridea - Atom Feed" href="https://lxykyle01.github.io//atom.xml">
 
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+
+
   </head>
   <body>
-    <div class="head-top-line"></div>
-    <div class="header-box">
-      <header class="header">
-  <div class="blog-header" id="header">
-    <div class="site-meta">
-      <div class="nav-toggle" id="nav_toggle">
-        <div class="toggle-box">
-          <div class="line line-top"></div>
-          <div class="line line-center"></div>
-          <div class="line line-bottom"></div>
-        </div>
-      </div>
-      <div class="site-title">
-        <a href="/" class="brand">
-          <span>Gridea</span>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://lxykyle01.github.io/">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://lxykyle01.github.io//images/avatar.png?v=1577646526085" alt="">
         </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Gridea</h1>
       </div>
-      <p class="subtitle">Quick notes</p>
-    </div>
-    <nav class="site-nav" id="site_nav">
-      <ul>
-        <li class="nav-item ">
-          
-            
-              
-                <a href="http://localhost:4000/">
-                  <i class="iconfont icon-home"></i> HOME
-                </a>
-              
-            
-          
-            
-          
-            
-          
-            
-          
-        </li>
-        <li class="nav-item ">
-          
-            
-          
-            
-              
-                <a href="http://localhost:4000/archives">
-                  <i class="iconfont icon-archive"></i> ARCHIVE
-                </a>
-              
-            
-          
-            
-          
-            
-          
-        </li>
-        <li class="nav-item ">
-          
-            
-          
-            
-          
-            
-              
-                <a href="http://localhost:4000/tags">
-                  <i class="iconfont icon-tags"></i> TAGS
-                </a>
-              
-            
-          
-            
-          
-        </li>
-        <li class="nav-item">
-          <a>
-            <i class="iconfont icon-search"></i> SEARCH
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<script type="text/javascript"> 
- 
-  let showNav = true;
-
-  let navToggle = document.querySelector('#nav_toggle'),
-  siteNav = document.querySelector('#site_nav');
-  
-  function navClick() {
-    navToggle.classList.toggle('nav-toggle-active');
-    siteNav.classList.toggle('nav-menu-active');
-  }
-
-  navToggle.addEventListener('click',navClick);  
-</script>
-    </div>
-    <div class="main-continer">
-      <div class="section-layout">
-        <div class="section-layout-wrapper">
-          
-<div class="sidebar">
-    <div class="sidebar-wrapper" id="sidebar">
       
-        <div class="post-list-sidebar">
-          <div class="sidebar-title">
-            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">Table of Contents</span>
-            <span id="metaSideBar" class="sidebar-title-item">Site Overview</span>
-          </div>
-        </div>
-      
-      <div class="sidebar-body" id="sidebar_body">
-        
-          <div class="post-side-meta" id="post_side_meta">
-            <div class="sidebar-wrapper">
-  <div class="sidebar-item">
-    <img class="site-author-image" src="http://localhost:4000/images/avatar.png"/>
-    <p class="site-author-name">Gridea</p>
-    <p class="site-description">温故而知新</p>
-  </div>
-  <div class="sidebar-item side-item-stat">
-    <div class="sidebar-item-box">
-      <a href="/archives/">
-        <span class="site-item-stat-count">3</span>
-        <span class="site-item-stat-name">Articles</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="">
-        <span class="site-item-stat-count">1</span>
-        <span class="site-item-stat-name">Classification</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="/tags/">
-        <span class="site-item-stat-count">1</span>
-        <span class="site-item-stat-name">Tags</span>
-      </a>
-    </div>
-  </div>
-  <div class="sidebar-item">
-    <span class="site-item-rss">
-        <i class="iconfont icon-rss"></i>
-        <a href="http://localhost:4000/atom.xml" target="_blank">RSS</a>
-    </span>
-  </div>
-  <div class="sidebar-item sidebar-item-social">
-    <div class="social-item">
-      <a href="https://www.github.com/hsxyhao">
-        <i class="iconfont icon-github"></i> GitHub
-      </a>
-      <a href="">
-        <i class="iconfont icon-twitter"></i> Twitter
-      </a>
-    </div>
-    <div class="social-item">
-      <a href="">
-        <i class="iconfont icon-globe"></i> 豆瓣
-      </a>
-      <a href="">
-        <i class="iconfont icon-globe"></i> 知乎
-      </a>
-    </div>
-  </div>
-</div>
-          </div>
-          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-            <div class="toc-box">
-  <div class="toc-wrapper" id="toc_wrapper">
-    <ul class="markdownIt-TOC">
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            Catalog
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#rootmaster-yumreposd-wget-nv-httppublic-repo-1hortonworkscomambaricentos72xupdates2503ambarireporootmaster-yumreposd-vim-ambarirepo">[root@master yum.repos.d]# wget -nv http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.5.0.3/ambari.repo<br>
-[root@master yum.repos.d]# vim ambari.repo</a></li>
-<li><a href="#version_number2503-7ambari-2503nameambari-version-ambari-2503baseurlhttpmasterambariambaricentos7gpgcheck0gpgkeyhttpmasterambariambaricentos7rpm-gpg-keyrpm-gpg-key-jenkinsenabled1priority1">#VERSION_NUMBER=2.5.0.3-7<br>
-[ambari-2.5.0.3]<br>
-name=ambari Version - ambari-2.5.0.3<br>
-baseurl=http://master/ambari/ambari/centos7/<br>
-gpgcheck=0<br>
-gpgkey=http://master/ambari/ambari/centos7/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins<br>
-enabled=1<br>
-priority=1</a></li>
-<li><a href="#rootmaster-yumreposd-wget-nv-httppublic-repo-1hortonworkscomhdpcentos72xupdates2603hdpreporootmaster-yumreposd-vim-hdprepo">[root@master yum.repos.d]# wget -nv http://public-repo-1.hortonworks.com/HDP/centos7/2.x/updates/2.6.0.3/hdp.repo<br>
-[root@master yum.repos.d]# vim hdp.repo</a></li>
-<li><a href="#hdp-utils-11021namehdp-utils-version-hdp-utils-11021baseurlhttpmasterhdpgpgcheck0gpgkeyhttpmasterhdprpm-gpg-keyrpm-gpg-key-jenkinsenabled1priority1">[HDP-UTILS-1.1.0.21]<br>
-name=HDP-UTILS Version - HDP-UTILS-1.1.0.21<br>
-baseurl=http://master/hdp/<br>
-gpgcheck=0<br>
-gpgkey=http://master/hdp/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins<br>
-enabled=1<br>
-priority=1</a></li>
-</ul>
-</li>
-<li><a href="#yum-clean-list">yum clean list</a></li>
-<li><a href="#yum-update-list">yum update list</a></li>
-<li><a href="#yum-makecache">yum makecache</a></li>
-<li><a href="#yum-repolist">yum repolist</a></li>
-<li><a href="#mysql-u-root-p">mysql -u root -p</a></li>
-<li><a href="#mysql-u-root-p-type-the-password-you-set-before">mysql -u root -p  # type the password you set before</a></li>
-<li><a href="#yum-install-y-mysql-connector-java">yum install -y mysql-connector-java</a></li>
-<li><a href="#ambari-server-setup">ambari-server setup</a></li>
-<li><a href="#java_homeusrlocaljdk8jdk180_231configuring-databaseenter-advanced-database-configuration-yn-n-yconfiguring-database">JAVA_HOME=usr/local/jdk8/jdk1.8.0_231/<br>
-Configuring database...Enter advanced database configuration [y/n] (n)? y<br>
-Configuring database...</a>
+<li>
 <ul>
-<li><a href="#hostname-localhost-ambariserverport-3306database-name-ambariusername-ambarienter-database-password-ambari-1234password-you-set-before">Hostname (localhost): ambari.server<br>
-Port (3306):<br>
-Database name (ambari):<br>
-Username (ambari):<br>
-Enter Database Password (ambari-1234):#password you set before</a></li>
+<li><a href="#1-build-two-vmcentos-7">1. BUILD TWO VM(CentOS 7)</a></li>
+<li><a href="#2-ssh-connection">2. SSH CONNECTION</a></li>
+<li><a href="#3-remote-control">3. REMOTE CONTROL</a></li>
+<li><a href="#4-hostname-and-hosts-config">4. HOSTNAME AND HOSTS CONFIG</a></li>
+<li><a href="#5-close-firewall">5. Close Firewall</a></li>
+<li><a href="#6-close-selinux">6. Close SElinux</a></li>
+<li><a href="#7-clock-synchronise">7. Clock Synchronise</a></li>
+<li><a href="#8-install-jdk18">8. Install JDK1.8</a></li>
+<li><a href="#9install-other-services">9.Install Other Services</a></li>
+<li><a href="#10-ssh-login-without-using-password">10. SSH login Without Using Password</a></li>
+<li><a href="#11-local-repo-configration">11. Local Repo Configration</a></li>
+<li><a href="#12-check-masterhdp-and-masterambariambaricentos7">12. Check master/hdp/ and master/ambari/ambari/centos7/</a></li>
+<li><a href="#14-install-ambari">14. Install Ambari</a></li>
+<li><a href="#15-start-ambari">15. Start Ambari</a></li>
 </ul>
 </li>
-<li><a href="#service-ambari-server-restart">service ambari-server restart</a></li>
+</ul>
+</li>
 </ul>
 
-  </div>
-</div>
-
-<script>
-
-let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
-let active = 'active-show', activeClass = 'active-current';
-let tocWrapper = document.querySelector('#toc_wrapper');
-let tocContent = tocWrapper.children[0];
-
-function addTocNumber(elem, deep) {
-  if (!elem) {
-    return;
-  }
-  let prop = elem.__proto__;
-
-  if (prop === HTMLUListElement.prototype) {
-    for (let i = 0; i < elem.children.length; i++) {
-      addTocNumber(elem.children[i], deep + (i + 1) + '.');
-    }
-  } else if (prop === HTMLLIElement.prototype) {
-    // 保存li元素
-    lList.push(elem);
-    for (let i = 0; i < elem.children.length; i++) {
-      let cur = elem.children[i];
-      if (cur.__proto__ === HTMLAnchorElement.prototype) {
-        cur.text =  deep + ' ' + cur.text;
-      } else if (cur.__proto__ === HTMLUListElement.prototype) {
-        addTocNumber(cur, deep);
-      }
-    }
-  }
-}
-
-
-document.addEventListener('scroll', function(e) {
-  if (lList.length <= 0) {
-    return;
-  }
-  let scrollTop = document.body.scrollTop;
-  let dir;
-
-  if (lastTop - scrollTop > 0) {
-    dir = 'up';
-  } else {
-    dir = 'down';
-  }
-
-  lastTop = scrollTop;
-  if (scrollTop <= 0) {
-    if (lastIndex >= 0 && lastIndex < hList.length) {
-      lList[lastIndex].classList.remove(activeClass);
-    }
-    return;
-  }
-
-  let current = 0, hasFind = false;
-  for (let i = 0; i < hList.length; i++) {
-    if (hList[i].offsetTop > scrollTop) {
-      current = i;
-      hasFind = true;
-      break;
-    }
-  }
-  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-    current = hList.length - 1;
-  } else {
-    current--;
-  }
-  if (dir === 'down') {
-    if (current > lastIndex) {
-      addActiveClass(current);
-      removeActiveClass(lastIndex) 
-      lastIndex = current;
-      removeParentActiveClass();
-      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
-    }
-  } else {
-    if (current < lastIndex) {
-      addActiveClass(current);
-      removeActiveClass(lastIndex);
-      lastIndex = current;
-      removeParentActiveClass();
-      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
-    }
-  }
-});
-
-function removeParentActiveClass() {
-  let parents = tocContent.querySelectorAll('.'+active)
-  parents.forEach(function(elem) {
-    elem.classList.remove(active);
-  });
-}
-
-function addActiveClass(index) {
-  if (index >= 0 && index < hList.length) {
-    lList[index].classList.add(activeClass);
-  }
-}
-
-function removeActiveClass(index) {
-  if (index >= 0 && index < hList.length) {
-    lList[index].classList.remove(activeClass);
-  }
-}
-
-function addActiveLiElemment(elem, parent) {
-  if (!elem || elem === parent) {
-    return;
-  } else {
-    if (elem.__proto__ === HTMLLIElement.prototype) {
-      elem.classList.add(active);
-    }
-    addActiveLiElemment(elem.parentElement, parent);
-  }
-}
-
-function showToc() {
-  if (tocWrapper) {
-    postBody = document.querySelector('#post_body');
-    for (let i = 0; i < postBody.children.length; i++) {
-      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-        hList.push(postBody.children[i]);
-      }
-    }
-
-    if (hList.length > 10) {
-      active = 'active-hidden'
-      tocContent.classList.add('closed');
-    } else {
-      tocContent.classList.add('expanded');
-    }
-  }
-}
-addTocNumber(tocContent, '');
-
-window.addEventListener('load', function() {
-  showToc();
-  document.querySelector('#sidebar').style='display: block;';
-  tocWrapper.classList.add('toc-active');
-  setTimeout(function() {
-    if ("createEvent" in document) {
-      let evt = document.createEvent("HTMLEvents");
-      evt.initEvent("scroll", false, true);
-      document.dispatchEvent(evt);
-    }
-    else {
-      document.fireEvent("scroll");
-    }
-  }, 500)
-})
-
-</script>
           </div>
-        
-      </div>
+        </div>
+      
     </div>
-</div>
-<script>
-  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
-  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
-  const SLIDE_UP_IN = 'slide-up-in';
-
-  let sidebar = document.querySelector('#sidebar'),
-  tocSideBar = document.querySelector('#tocSideBar'),
-  metaSideBar = document.querySelector('#metaSideBar'),
-  postToc = document.querySelector('#post_toc'),
-  postSiteMeta = document.querySelector('#post_side_meta'),
-  sidebarTitle = document.querySelector('.sidebar-title'),
-  sidebarBody = document.querySelector('#sidebar_body');
-
-  tocSideBar.addEventListener('click', (e) => {
-    toggleSidebar(e);
-  });
-
-  metaSideBar.addEventListener('click', (e) => {
-    toggleSidebar(e);
-  });
-
-  function toggleSidebar(e) {
-    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
-    if (currentTitle == e.srcElement) {
-      return ;
-    }
-    let current, showElement, hideElement;
-    if (e.srcElement == metaSideBar) {
-      showElement = postSiteMeta;
-      hideElement = postToc;
-    } else if (e.srcElement == tocSideBar){
-      showElement = postToc;
-      hideElement = postSiteMeta;
-    }
-    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
-    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
-
-    window.Velocity(hideElement, 'stop');
-    window.Velocity(hideElement, 'transition.slideUpOut', {
-      display: 'none',
-      duration: 200,
-      complete: function () {
-        window.Velocity(showElement, 'transition.slideDownIn', {
-          duration: 200
-        });
-      }
-    })
-    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
-    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
-
-  }
-
-  postToc.addEventListener('transitionend', function() {
-    this.classList.remove(SLIDE_UP_IN);
-  });
-
-  let limitTop = sidebar.offsetTop;
-  let hasFix = false;
-  window.addEventListener('scroll', function(e) {
-    if (document.body.scrollTop >= limitTop) {
-      if (!hasFix) {
-        sidebar.classList.add('sidebar-fixed');
-        hasFix = true;
-      }
-    } else {
-      if (hasFix) {
-        sidebar.classList.remove('sidebar-fixed');
-        hasFix = false;
-      }
-    }
-  });
-</script>
-          <div class="section-box">
-            <div class="section post">
-              <div class="article-box">
-    <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="http://localhost:4000/post/ambari">
-      Ambari 
-    </a>
-  </h1>
-  <div class="post-meta">
-    <span class="meta-item">
-      <i class="iconfont icon-calendar_empty"></i>
-      <span class="pc-show">Posted on</span>
-      <span>2019-12-29</span>
-    </span>
-    
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="iconfont icon-time"></i>
-      <span>10minutes</span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="iconfont icon-keyboard"></i>
-      <span class="pc-show">1544word count</span>
-    </span>
   </div>
-</header>
 </div>
-              <div class="post-body next-md-body" id="post_body">
-                <h3 id="1-build-two-vmcentos-7">1. BUILD TWO VM(CentOS 7)</h3>
-<figure data-type="image" tabindex="1"><img src="https://lxykyle01.github.io//post-images/1575760782967.png" alt=""></figure>
-<!-- more -->
+
+<div class="menu-container">
+  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          HOME
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          ARCHIVE
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          TAGS
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          ABOUT
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="https://lxykyle01.github.io//atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">How to Deploy Hadoop with Ambari</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-12-23 / 9 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://lxykyle01.github.io//post-images/ambari.jpg" alt="">
+        
+        <div class="post-content yue">
+          <h3 id="1-build-two-vmcentos-7">1. BUILD TWO VM(CentOS 7)</h3>
+<figure data-type="image" tabindex="1"><img src="https://lxykyle01.github.io//post-images/1577645718725.png" alt="" loading="lazy"></figure>
 <h3 id="2-ssh-connection">2. SSH CONNECTION</h3>
 <p>Create public key in Xshell,then copy it to the google cloud server.(For Users)<br>
 Change root code(For Root)</p>
 <h3 id="3-remote-control">3. REMOTE CONTROL</h3>
 <p>Install xfce for master</p>
-<pre><code class="language-vb"> #sodu yum groupinstall xfce 
+<pre><code class="language-c"># sodu yum groupinstall xfce 
 </code></pre>
-<p>Use xstart to load this command <em>/usr/bin/xfce4-session</em> and use Xmanager to remote connect it.<br>
+<p>Use xstart to load this command /usr/bin/xfce4-session and use Xmanager to remote connect it.<br>
 Choose default setting to set up the start window.</p>
 <h3 id="4-hostname-and-hosts-config">4. HOSTNAME AND HOSTS CONFIG</h3>
 <p>Change hostname to the name in <em>/ect/hosts</em><br>
 Add node's hostname and ip in master's hosts file and add master's hostname and ip in node's hosts file.</p>
-<pre><code class="language-cpp">centos 7 
+<pre><code class="language-c">centos 7 
 [root@localhost ~]# hostnamectl set-hostname master #your hostname
 [root@localhost ~]# vim /etc/sysconfig/network
 -------------------------------------------------------------------
@@ -520,25 +140,24 @@ HOSTNAME=master #your hostname
 #your master and nodes ip and hostname
 </code></pre>
 <h3 id="5-close-firewall">5. Close Firewall</h3>
-<pre><code class="language-vb">centos7
+<pre><code class="language-c">centos7
 [root@localhost ~]# systemctl disable firewalld.service  
 [root@localhost ~]# systemctl stop firewalld.service 
 </code></pre>
 <h3 id="6-close-selinux">6. Close SElinux</h3>
-<pre><code class="language-vb">[root@localhost ~]# vi /etc/sysconfig/selinux
+<pre><code class="language-c">[root@localhost ~]# vi /etc/sysconfig/selinux
 ----------------------------------------------------------------------
 SELINUX=disabled
 </code></pre>
 <h3 id="7-clock-synchronise">7. Clock Synchronise</h3>
-<pre><code class="language-vb">[root@localhost ~] yum install -y ntp  
+<pre><code class="language-c">[root@localhost ~] yum install -y ntp  
 [root@localhost ~] chkconfig --list ntpd  
 [root@localhost ~] systemctl is-enabled ntpd  
 [root@localhost ~] systemctl enable ntpd  
 [root@localhost ~] systemctl start ntpd 
 </code></pre>
 <h3 id="8-install-jdk18">8. Install JDK1.8</h3>
-<p>Download JAVA JDK 1.8 for Linus in both master and node.</p>
-<pre><code class="language-vb">[root@localhost ~]# cd /usr/local
+<pre><code class="language-c">[root@localhost ~]# cd /usr/local
 [root@localhost local]# mkdir jdk8
 [root@localhost local]# cd jdk8
 [root@master jdk8]# tar -zxvf jdk-8u231-linux-x64.tar.gz 
@@ -553,14 +172,14 @@ export PATH=$PATH:$JAVA_HOME/bin
 [root@master jdk8]# source /etc/profile
 [root@master jdk8]# java -version #Check it
 </code></pre>
-<h3 id="9-install-other-services">9. Install Other Services</h3>
-<pre><code class="language-vb">[root@localhost ~]# umask 0022
+<h3 id="9install-other-services">9.Install Other Services</h3>
+<pre><code class="language-c">[root@localhost ~]# umask 0022
 [root@ambari01 ~]# yum -y install lrzsz
 [root@ambari01 ~]# yum install -y openssh-clients
 </code></pre>
-<p><mark>Steps 1~9 should be done in both master and node server<mark></p>
+<p>Steps 1~9 should be done in both master and node server</p>
 <h3 id="10-ssh-login-without-using-password">10. SSH login Without Using Password</h3>
-<pre><code class="language-vb">[root@master ~]# ssh-keygen -t rsa
+<pre><code class="language-c">[root@master ~]# ssh-keygen -t rsa
 [root@master ~]# cd .ssh
 [root@master .ssh]# ls
 id_rsa  id_rsa.pub
@@ -575,7 +194,7 @@ CentOS 7：<br>
 http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.5.0.3/ambari-2.5.0.3-centos7.tar.gz<br>
 http://public-repo-1.hortonworks.com/HDP/centos7/2.x/updates/2.6.0.3/HDP-2.6.0.3-centos7-rpm.tar.gz<br>
 http://public-repo-1.hortonworks.com/HDP-UTILS-1.1.0.21/repos/centos7/HDP-UTILS-1.1.0.21-centos7.tar.gz</p>
-<pre><code class="language-vb">[root@master ~]# yum install yum-utils createrepo yum-plugin-priorities -y
+<pre><code class="language-c">[root@master ~]# yum install yum-utils createrepo yum-plugin-priorities -y
 #Add gpgcheck=0
 [root@master ~]# vi /etc/yum/pluginconf.d/priorities.conf
 ---------------------------------------------------------------------------
@@ -594,56 +213,66 @@ gpgcheck = 0
 [root@master ambari]# cd ..
 [root@master html]# mkdir hdp
 #creat catalog and unzip
-<p>root@master Downloads]# ls<br>
-ambari-2.5.0.3-centos7.tar.gz   HDP-UTILS-1.1.0.21-centos7.tar.gz<br>
-HDP-2.6.0.3-centos7-rpm.tar.gz</p>
-<p>[root@master Downloads]# tar -zxvf ambari-2.5.0.3-centos7.tar.gz -C /var/www/html/ambari<br>
-[root@master Downloads]# tar -zxvf HDP-2.6.0.3-centos7-rpm.tar.gz -C /var/www/html/hdp<br>
-[root@master Downloads]# tar -zxvf HDP-UTILS-1.1.0.21-centos7.tar.gz -C /var/www/html/hdp</p>
-<p>#creat repo<br>
-[root@master Downloads]# cd /var/www/html/ambari/<br>
-[root@master ambari]# createrepo ./</p>
-<p>[root@master Downloads]# cd /etc/yum.repos.d/<br>
-[root@master yum.repos.d]# ls<br>
-CentOS7-Base-163.repo    CentOS-Debuginfo.repo  CentOS-Sources.repo<br>
-CentOS-Base.repo.backup  CentOS-fasttrack.repo  CentOS-Vault.repo<br>
-CentOS-CR.repo           CentOS-Media.repo</p>
-<h2 id="rootmaster-yumreposd-wget-nv-httppublic-repo-1hortonworkscomambaricentos72xupdates2503ambarireporootmaster-yumreposd-vim-ambarirepo">[root@master yum.repos.d]# wget -nv http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.5.0.3/ambari.repo<br>
-[root@master yum.repos.d]# vim ambari.repo</h2>
-<h2 id="version_number2503-7ambari-2503nameambari-version-ambari-2503baseurlhttpmasterambariambaricentos7gpgcheck0gpgkeyhttpmasterambariambaricentos7rpm-gpg-keyrpm-gpg-key-jenkinsenabled1priority1">#VERSION_NUMBER=2.5.0.3-7<br>
-[ambari-2.5.0.3]<br>
-name=ambari Version - ambari-2.5.0.3<br>
-baseurl=http://master/ambari/ambari/centos7/<br>
-gpgcheck=0<br>
-gpgkey=http://master/ambari/ambari/centos7/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins<br>
-enabled=1<br>
-priority=1</h2>
-<h2 id="rootmaster-yumreposd-wget-nv-httppublic-repo-1hortonworkscomhdpcentos72xupdates2603hdpreporootmaster-yumreposd-vim-hdprepo">[root@master yum.repos.d]# wget -nv http://public-repo-1.hortonworks.com/HDP/centos7/2.x/updates/2.6.0.3/hdp.repo<br>
-[root@master yum.repos.d]# vim hdp.repo</h2>
-<p>#VERSION_NUMBER=2.6.0.3-8<br>
-[HDP-2.6.0.3]<br>
-name=HDP Version - HDP-2.6.0.3<br>
-baseurl=http://master/hdp/HDP/centos7/<br>
-gpgcheck=0<br>
-gpgkey=http://master/hdp/HDP/centos7/HDP/centos7/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins<br>
-enabled=1<br>
-priority=1</p>
-<h2 id="hdp-utils-11021namehdp-utils-version-hdp-utils-11021baseurlhttpmasterhdpgpgcheck0gpgkeyhttpmasterhdprpm-gpg-keyrpm-gpg-key-jenkinsenabled1priority1">[HDP-UTILS-1.1.0.21]<br>
-name=HDP-UTILS Version - HDP-UTILS-1.1.0.21<br>
-baseurl=http://master/hdp/<br>
-gpgcheck=0<br>
-gpgkey=http://master/hdp/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins<br>
-enabled=1<br>
-priority=1</h2>
-<h1 id="yum-clean-list">yum clean list</h1>
-<h1 id="yum-update-list">yum update list</h1>
-<h1 id="yum-makecache">yum makecache</h1>
-<h1 id="yum-repolist">yum repolist</h1>
-<p></code></pre></p>
-<h3 id="11-check-masterhdp-and-masterambariambaricentos7">11. Check master/hdp/ and master/ambari/ambari/centos7/</h3>
-<figure data-type="image" tabindex="2"><img src="https://lxykyle01.github.io//post-images/1575807573478.jpg" alt=""></figure>
-<h3 id="12-install-mysql">12. Install MySQL</h3>
-<pre><code class="language-vb"># wget http://repo.mysql.com/mysql57-community-release-el7-8.noarch.rpm
+
+root@master Downloads]# ls
+ambari-2.5.0.3-centos7.tar.gz   HDP-UTILS-1.1.0.21-centos7.tar.gz
+HDP-2.6.0.3-centos7-rpm.tar.gz
+
+[root@master Downloads]# tar -zxvf ambari-2.5.0.3-centos7.tar.gz -C /var/www/html/ambari
+[root@master Downloads]# tar -zxvf HDP-2.6.0.3-centos7-rpm.tar.gz -C /var/www/html/hdp
+[root@master Downloads]# tar -zxvf HDP-UTILS-1.1.0.21-centos7.tar.gz -C /var/www/html/hdp
+
+#creat repo
+[root@master Downloads]# cd /var/www/html/ambari/
+[root@master ambari]# createrepo ./
+
+[root@master Downloads]# cd /etc/yum.repos.d/
+[root@master yum.repos.d]# ls
+CentOS7-Base-163.repo    CentOS-Debuginfo.repo  CentOS-Sources.repo
+CentOS-Base.repo.backup  CentOS-fasttrack.repo  CentOS-Vault.repo
+CentOS-CR.repo           CentOS-Media.repo
+
+[root@master yum.repos.d]# wget -nv http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.5.0.3/ambari.repo
+[root@master yum.repos.d]# vim ambari.repo 
+------------------------------------------------------------------------------------
+#VERSION_NUMBER=2.5.0.3-7
+[ambari-2.5.0.3]
+name=ambari Version - ambari-2.5.0.3
+baseurl=http://master/ambari/ambari/centos7/
+gpgcheck=0
+gpgkey=http://master/ambari/ambari/centos7/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+enabled=1
+priority=1
+------------------------------------------------------------------------------------
+[root@master yum.repos.d]# wget -nv http://public-repo-1.hortonworks.com/HDP/centos7/2.x/updates/2.6.0.3/hdp.repo
+[root@master yum.repos.d]# vim hdp.repo 
+------------------------------------------------------------------------------------
+#VERSION_NUMBER=2.6.0.3-8
+[HDP-2.6.0.3]
+name=HDP Version - HDP-2.6.0.3
+baseurl=http://master/hdp/HDP/centos7/
+gpgcheck=0
+gpgkey=http://master/hdp/HDP/centos7/HDP/centos7/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+enabled=1
+priority=1
+
+[HDP-UTILS-1.1.0.21]
+name=HDP-UTILS Version - HDP-UTILS-1.1.0.21
+baseurl=http://master/hdp/
+gpgcheck=0
+gpgkey=http://master/hdp/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+enabled=1
+priority=1
+-------------------------------------------------------------------------------------
+# yum clean list
+# yum update list
+# yum makecache
+# yum repolist
+</code></pre>
+<h3 id="12-check-masterhdp-and-masterambariambaricentos7">12. Check master/hdp/ and master/ambari/ambari/centos7/</h3>
+<p><img src="https://lxykyle01.github.io//post-images/1577645825672.jpg" alt="" loading="lazy"><br>
+###13. Install MySQL</p>
+<pre><code class="language-c"># wget http://repo.mysql.com/mysql57-community-release-el7-8.noarch.rpm
 # rpm -ivh mysql57-community-release-el7-8.noarch.rpm  --nodeps --force
 # cd /etc/yum.repos.d
 # ls -l
@@ -651,213 +280,233 @@ priority=1</h2>
 # systemctl start mysqld
 # service mysqld status
 # grep 'temporary password' /var/log/mysqld.log  #It will return a random password
-<h1 id="mysql-u-root-p">mysql -u root -p</h1>
-<p>mysql&gt; Enter password: # type the random passwor you got before<br>
-mysql&gt; set global validate_password_policy=0;<br>
-mysql&gt; set global validate_password_length=4;<br>
-mysql&gt; alter user 'root'@'localhost' identified by 'root-1234'; #Set your own password to replace root-1234<br>
-mysql&gt; flush privileges;<br>
-mysql&gt; quit;</p>
-<h1 id="mysql-u-root-p-type-the-password-you-set-before">mysql -u root -p  # type the password you set before</h1>
-<p>mysql&gt; GRANT ALL PRIVILEGES ON <em>.</em> TO 'root'@'%' IDENTIFIED BY ' root-1234' WITH GRANT OPTION;<br>
-mysql&gt; FLUSH PRIVILEGES;</p>
-<h1 id="yum-install-y-mysql-connector-java">yum install -y mysql-connector-java</h1>
-<p>mysql&gt; create database ambari character set utf8;<br>
-mysql&gt; CREATE USER 'ambari'@'%' IDENTIFIED BY 'ambari-1234'; #Set your own password to replace ambari-1234<br>
-mysql&gt; GRANT ALL PRIVILEGES ON <em>.</em> TO 'ambari'@'%';<br>
-mysql&gt; FLUSH PRIVILEGES;</p>
-<p>mysql&gt; create database hive character set utf8;<br>
-mysql&gt; CREATE USER 'hive'@'%' IDENTIFIED BY 'hive-1234';  #Set your own password to replace hive-1234<br>
-mysql&gt; GRANT ALL PRIVILEGES ON <em>.</em> TO 'hive'@'%';<br>
-mysql&gt; FLUSH PRIVILEGES;<br>
-</code></pre></p>
-<h3 id="13-install-ambari">13. Install Ambari</h3>
-<pre><code class="language-vb"># yum install -y ambari-server
+
+# mysql -u root -p
+
+mysql&gt; Enter password: # type the random passwor you got before
+mysql&gt; set global validate_password_policy=0;
+mysql&gt; set global validate_password_length=4;
+mysql&gt; alter user 'root'@'localhost' identified by 'root-1234'; #Set your own password to replace root-1234
+mysql&gt; flush privileges;
+mysql&gt; quit;
+
+# mysql -u root -p  # type the password you set before
+
+mysql&gt; GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY ' root-1234' WITH GRANT OPTION;
+mysql&gt; FLUSH PRIVILEGES;
+
+# yum install -y mysql-connector-java
+
+mysql&gt; create database ambari character set utf8;
+mysql&gt; CREATE USER 'ambari'@'%' IDENTIFIED BY 'ambari-1234'; #Set your own password to replace ambari-1234
+mysql&gt; GRANT ALL PRIVILEGES ON *.* TO 'ambari'@'%';
+mysql&gt; FLUSH PRIVILEGES;
+
+mysql&gt; create database hive character set utf8;
+mysql&gt; CREATE USER 'hive'@'%' IDENTIFIED BY 'hive-1234';  #Set your own password to replace hive-1234
+mysql&gt; GRANT ALL PRIVILEGES ON *.* TO 'hive'@'%';
+mysql&gt; FLUSH PRIVILEGES;
+</code></pre>
+<h3 id="14-install-ambari">14. Install Ambari</h3>
+<pre><code class="language-c"># yum install -y ambari-server
 # mysql -uroot -p
-<p>mysql&gt; use ambari;<br>
-mysql&gt; source /var/lib/ambari-server/resources/Ambari-DDL-MySQL-CREATE.sql;</p>
-<h1 id="ambari-server-setup">ambari-server setup</h1>
-<hr>
-<p>Customize user account for ambari-server daemon [y/n] (n)? y<br>
-Enter user account for ambari-server daemon (root): root<br>
-Adjusting ambari-server permissions and ownership...<br>
-Checking JDK...Do you want to change Oracle JDK [y/n] (n)? y</p>
-<p>[1] Oracle JDK 1.8 + Java Cryptography Extension (JCE) Policy Files 8<br>
-[2] Oracle JDK 1.7 + Java Cryptography Extension (JCE) Policy Files 7<br>
-[3] Custom JDK</p>
-<p>==========================================</p>
-<p>Enter choice (1): 3</p>
-<h1 id="java_homeusrlocaljdk8jdk180_231configuring-databaseenter-advanced-database-configuration-yn-n-yconfiguring-database">JAVA_HOME=usr/local/jdk8/jdk1.8.0_231/<br>
-Configuring database...Enter advanced database configuration [y/n] (n)? y<br>
-Configuring database...</h1>
-<p>Choose one of the following options:</p>
-<p>[1] - PostgreSQL (Embedded)<br>
-[2] - Oracle<br>
-[3] - MySQL<br>
-[4] - PostgreSQL<br>
-[5] - Microsoft SQL Server (Tech Preview)<br>
-[6] - SQL Anywhere</p>
-<p>==========================================</p>
-<p>Enter choice (1): 3</p>
-<h2 id="hostname-localhost-ambariserverport-3306database-name-ambariusername-ambarienter-database-password-ambari-1234password-you-set-before">Hostname (localhost): ambari.server<br>
-Port (3306):<br>
-Database name (ambari):<br>
-Username (ambari):<br>
-Enter Database Password (ambari-1234):#password you set before</h2>
-<p></code></pre></p>
-<h3 id="14-start-ambari">14. Start Ambari</h3>
-<pre><code class="language-vb"># ambari-server start
+
+mysql&gt; use ambari;
+mysql&gt; source /var/lib/ambari-server/resources/Ambari-DDL-MySQL-CREATE.sql;
+
+# ambari-server setup
+--------------------------------------------------------------------------------
+Customize user account for ambari-server daemon [y/n] (n)? y
+Enter user account for ambari-server daemon (root): root
+Adjusting ambari-server permissions and ownership...
+Checking JDK...Do you want to change Oracle JDK [y/n] (n)? y
+
+[1] Oracle JDK 1.8 + Java Cryptography Extension (JCE) Policy Files 8
+[2] Oracle JDK 1.7 + Java Cryptography Extension (JCE) Policy Files 7
+[3] Custom JDK
+
+==========================================
+
+Enter choice (1): 3
+
+JAVA_HOME=usr/local/jdk8/jdk1.8.0_231/
+Configuring database...Enter advanced database configuration [y/n] (n)? y
+Configuring database...
+========================================
+
+Choose one of the following options:
+
+[1] - PostgreSQL (Embedded)
+[2] - Oracle
+[3] - MySQL
+[4] - PostgreSQL
+[5] - Microsoft SQL Server (Tech Preview)
+[6] - SQL Anywhere
+
+==========================================
+
+Enter choice (1): 3
+
+Hostname (localhost): ambari.server
+Port (3306):
+Database name (ambari):
+Username (ambari):
+Enter Database Password (ambari-1234):#password you set before
+-------------------------------------------------------------------------------
+</code></pre>
+<h3 id="15-start-ambari">15. Start Ambari</h3>
+<pre><code class="language-c"># ambari-server start
 </code></pre>
 <p>http://master:8080/#/login #USE firefox to open it</p>
 <p>Username:admin<br>
-Password:admin</p>
-<figure data-type="image" tabindex="3"><img src="https://lxykyle01.github.io//post-images/1575808895486.jpg" alt=""></figure>
+Password:admin<br>
+<img src="https://lxykyle01.github.io//post-images/1577645803691.jpg" alt="" loading="lazy"></p>
 <p>Type cluster name: any name your want</p>
 <p>Chose HDP-2.6(Defaut Version)<br>
-Use local Repository</p>
-<figure data-type="image" tabindex="4"><img src="https://lxykyle01.github.io//post-images/1575809038377.jpg" alt=""></figure>
+Use local Repository<br>
+<img src="https://lxykyle01.github.io//post-images/1577645785961.jpg" alt="" loading="lazy"></p>
 <p>Target Hosts :Paste both master and node FQDN hostname here</p>
 <p>For ssh private key: chose id_rsa from /root/.ssh(It is a hide file,you need click show hide files)</p>
 <p>Next</p>
 <p>Find : SSLError:Failed to connect.Please check openssl library versions.</p>
 <p>Use below set for both master and node</p>
-<pre><code class="language-vb">vim /etc/python/cert-verification.cfg
-<p>[https]<br>
-verify=disable</p>
-<p>vim /etc/ambari-agent/ambari-agent</p>
-<p>[security]<br>
-force_https_protocol=PROTOCOL_TLSv1_2</p>
-<h1 id="service-ambari-server-restart">service ambari-server restart</h1>
-<p></code></pre></p>
+<pre><code class="language-c">vim /etc/python/cert-verification.cfg
+
+[https]
+verify=disable
+
+vim /etc/ambari-agent/ambari-agent
+
+[security]
+force_https_protocol=PROTOCOL_TLSv1_2
+
+# service ambari-server restart
+</code></pre>
 <p>And restart the webpage to retry before steps.</p>
-<pre><code>    &lt;/div&gt;
 
-    
-      &lt;a class=&quot;animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 &quot; href=&quot;https://lxykyle01.github.io//tag/JRtnuz_Nf&quot;&gt;
-        &lt;span class=&quot;flex-auto&quot;&gt;Ambari&lt;/span&gt;
-      &lt;/a&gt;
-    
-
-
-    &lt;div class=&quot;flex justify-between py-8&quot;&gt;
-      
-        &lt;div class=&quot;prev-post&quot;&gt;
-          &lt;a href=&quot;https://lxykyle01.github.io//post/a-comparison-of-distributed-machine-learning-platforms&quot;&gt;
-            &lt;h3 class=&quot;post-title&quot;&gt;
-              &lt;i class=&quot;remixicon-arrow-left-line&quot;&gt;&lt;/i&gt;
-              Principles of a Distributed Deep Learning Framework
-            &lt;/h3&gt;
-          &lt;/a&gt;
-        &lt;/div&gt;
-      
-
-      
-    &lt;/div&gt;
-
-    
-
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-              </div>
-              <div class="post-footer">
-  <ul class="post-copyright">
-    <li class="post-copyright-author">
-      <strong>本文作者：</strong>
-      Gridea
-    </li>
-    <li class="post-copyright-link">
-      <strong>links：</strong>
-      <a href="http://localhost:4000/post/ambari" title="Ambari ">http://localhost:4000/post/ambari</a>
-    </li>
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong>
-      本博客所有文章除特别声明外,转载请注明出处！
-    </li>
-  </ul>
-  <div class="tags">
-    
-  </div>
-  <div class="nav">
-    <div class="nav-prev">
-      
-    </div>
-    <div class="nav-next">
-      
-        <a class="nav-pc-next" href="http://localhost:4000/post/hello-gridea">Hello Gridea</a>
-        <a class="nav-mobile-next" href="http://localhost:4000/post/hello-gridea">DOWN</a>
-        <i class="iconfont icon-angle_right"></i>
-      
-    </div>
-  </div>
-</div>
-              
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="footer-box">
-  <footer class="footer">
-    <div class="copyright">
-      © 2019-2020 <i class="iconfont icon-heart"></i> HsxyHao
-    </div>
-    <div class="poweredby">
-      <div class="power-left">Power By<a href="https://github.com/hsxyhao"> HsxyHao</a></div>
-      <div>Copy<a href="https://github.com/iissnan/hexo-theme-next"> Hexo Next Theme</a></div>
-    </div>
-  </footer>
-  <div class="back-to-top" id="back_to_top">
-    <i class="iconfont icon-arrow_up"></i>
-    <span class="scrollpercent">
-      <span id="back_to_top_text">100</span>%
-    </span>
-  </div>
-</div>
 
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="https://lxykyle01.github.io/post/useful-links">
+                <h3 class="post-title">
+                  <i class="remixicon-arrow-left-line"></i>
+                  Useful Links
+                </h3>
+              </a>
+            </div>
+          
+
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+
+    <script src="https://lxykyle01.github.io//media/prism.js"></script>  
 <script>
 
-  let body = document.body;
+Prism.highlightAll()
 
-  let back2Top = document.querySelector('#back_to_top'),
-  back2TopText = document.querySelector('#back_to_top_text');
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-  function scrollAnimation(currentY, targetY) {
-   
-    let needScrollTop = targetY - currentY
-    let _currentY = currentY
-    setTimeout(() => {
-      const dist = Math.ceil(needScrollTop / 10)
-      _currentY += dist
-      window.scrollTo(_currentY, currentY)
-      if (needScrollTop > 10 || needScrollTop < -10) {
-        scrollAnimation(_currentY, targetY)
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
       } else {
-        window.scrollTo(_currentY, targetY)
+        link.classList.add("current");
       }
-    }, 1)
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
   }
+});
 
-  back2Top.addEventListener("click", function(e) {
-    scrollAnimation(body.scrollTop, 0);
-    e.stopPropagation();
-    return false;
-  });
-  
-  window.addEventListener('scroll', function(e) {
-    let percent = body.scrollTop / (body.scrollHeight - body.clientHeight) * 100;
-    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
-      back2Top.classList.add('back-top-active');
-    }
-    if (percent == 0) {
-      back2Top.classList.remove('back-top-active');
-    }
-    back2TopText.textContent = Math.floor(percent);
-  });
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
 
-  // 代码高亮
-  hljs.initHighlightingOnLoad();
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
 </script>
-    </div>
+  
   </body>
-  <script src="/media/js/motion.js"></script>
 </html>
