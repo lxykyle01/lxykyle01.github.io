@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://localhost:4000</id>
+    <title>Gridea</title>
+    <updated>2019-12-29T12:24:22.527Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="http://localhost:4000"/>
+    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>http://localhost:4000/images/avatar.png</logo>
+    <icon>http://localhost:4000/favicon.ico</icon>
+    <rights>All rights reserved 2019, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[Ambari ]]></title>
+        <id>http://localhost:4000/post/ambari</id>
+        <link href="http://localhost:4000/post/ambari">
+        </link>
+        <updated>2019-12-29T04:40:58.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="1-build-two-vmcentos-7">1. BUILD TWO VM(CentOS 7)</h3>
+<figure data-type="image" tabindex="1"><img src="https://lxykyle01.github.io//post-images/1575760782967.png" alt=""></figure>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="1-build-two-vmcentos-7">1. BUILD TWO VM(CentOS 7)</h3>
+<figure data-type="image" tabindex="1"><img src="https://lxykyle01.github.io//post-images/1575760782967.png" alt=""></figure>
+<!-- more -->
+<h3 id="2-ssh-connection">2. SSH CONNECTION</h3>
+<p>Create public key in Xshell,then copy it to the google cloud server.(For Users)<br>
+Change root code(For Root)</p>
+<h3 id="3-remote-control">3. REMOTE CONTROL</h3>
+<p>Install xfce for master</p>
+<pre><code class="language-vb"> #sodu yum groupinstall xfce 
+</code></pre>
+<p>Use xstart to load this command <em>/usr/bin/xfce4-session</em> and use Xmanager to remote connect it.<br>
+Choose default setting to set up the start window.</p>
+<h3 id="4-hostname-and-hosts-config">4. HOSTNAME AND HOSTS CONFIG</h3>
+<p>Change hostname to the name in <em>/ect/hosts</em><br>
+Add node's hostname and ip in master's hosts file and add master's hostname and ip in node's hosts file.</p>
+<pre><code class="language-cpp">centos 7 
+[root@localhost ~]# hostnamectl set-hostname master #your hostname
+[root@localhost ~]# vim /etc/sysconfig/network
+-------------------------------------------------------------------
+# Created by anaconda
+NETWORKING=yes
+HOSTNAME=master #your hostname
+--------------------------------------------------------------------
+[root@localhost ~]# vi  /etc/hosts
+--------------------------------------------------------------------
+192.168.192.154 master
+192.168.192.155 node
+#your master and nodes ip and hostname
+</code></pre>
+<h3 id="5-close-firewall">5. Close Firewall</h3>
+<pre><code class="language-vb">centos7
+[root@localhost ~]# systemctl disable firewalld.service  
+[root@localhost ~]# systemctl stop firewalld.service 
+</code></pre>
+<h3 id="6-close-selinux">6. Close SElinux</h3>
+<pre><code class="language-vb">[root@localhost ~]# vi /etc/sysconfig/selinux
+----------------------------------------------------------------------
+SELINUX=disabled
+</code></pre>
+<h3 id="7-clock-synchronise">7. Clock Synchronise</h3>
+<pre><code class="language-vb">[root@localhost ~] yum install -y ntp  
+[root@localhost ~] chkconfig --list ntpd  
+[root@localhost ~] systemctl is-enabled ntpd  
+[root@localhost ~] systemctl enable ntpd  
+[root@localhost ~] systemctl start ntpd 
+</code></pre>
+<h3 id="8-install-jdk18">8. Install JDK1.8</h3>
+<p>Download JAVA JDK 1.8 for Linus in both master and node.</p>
+<pre><code class="language-vb">[root@localhost ~]# cd /usr/local
+[root@localhost local]# mkdir jdk8
+[root@localhost local]# cd jdk8
+[root@master jdk8]# tar -zxvf jdk-8u231-linux-x64.tar.gz 
+[root@master jdk8]# vim /etc/profile
+-----------------------------------------------------------------------
+#java
+export JAVA_HOME=/usr/local/jdk8/jdk1.8.0_231
+export JRE_HOME=$JAVA_HOME/jre
+export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib
+export PATH=$PATH:$JAVA_HOME/bin
+------------------------------------------------------------------------
+[root@master jdk8]# source /etc/profile
+[root@master jdk8]# java -version #Check it
+</code></pre>
+<h3 id="9-install-other-services">9. Install Other Services</h3>
+<pre><code class="language-vb">[root@localhost ~]# umask 0022
+[root@ambari01 ~]# yum -y install lrzsz
+[root@ambari01 ~]# yum install -y openssh-clients
+</code></pre>
+<p><mark>Steps 1~9 should be done in both master and node server<mark></p>
+<h3 id="10-ssh-login-without-using-password">10. SSH login Without Using Password</h3>
+<pre><code class="language-vb">[root@master ~]# ssh-keygen -t rsa
+[root@master ~]# cd .ssh
+[root@master .ssh]# ls
+id_rsa  id_rsa.pub
+[root@master ~]# ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.192.155 #node ip address
+[root@master ~]# ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.192.156 #master ip address
+[root@master ~]# ssh 192.168.192.155 #test
+[root@node ~]# exit
+</code></pre>
+<h3 id="11-local-repo-configration">11. Local Repo Configration</h3>
+<p>Download these three files to master.<br>
+CentOS 7：<br>
+http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.5.0.3/ambari-2.5.0.3-centos7.tar.gz<br>
+http://public-repo-1.hortonworks.com/HDP/centos7/2.x/updates/2.6.0.3/HDP-2.6.0.3-centos7-rpm.tar.gz<br>
+http://public-repo-1.hortonworks.com/HDP-UTILS-1.1.0.21/repos/centos7/HDP-UTILS-1.1.0.21-centos7.tar.gz</p>
+<pre><code class="language-vb">[root@master ~]# yum install yum-utils createrepo yum-plugin-priorities -y
+#Add gpgcheck=0
+[root@master ~]# vi /etc/yum/pluginconf.d/priorities.conf
+---------------------------------------------------------------------------
+gpgcheck = 0
+---------------------------------------------------------------------------
+#check httpd 
+[root@master ~]# yum list httpd
+#install httpd
+[root@master ~]# yum install httpd
+#config HTTP 
+[root@master ~]# chkconfig httpd on
+[root@master ~]# service httpd start
+#Creat local repo
+[root@master ~]# cd /var/www/html/
+[root@master html]# mkdir ambari
+[root@master ambari]# cd ..
+[root@master html]# mkdir hdp
+#creat catalog and unzip
+<p>root@master Downloads]# ls<br>
+ambari-2.5.0.3-centos7.tar.gz   HDP-UTILS-1.1.0.21-centos7.tar.gz<br>
+HDP-2.6.0.3-centos7-rpm.tar.gz</p>
+<p>[root@master Downloads]# tar -zxvf ambari-2.5.0.3-centos7.tar.gz -C /var/www/html/ambari<br>
+[root@master Downloads]# tar -zxvf HDP-2.6.0.3-centos7-rpm.tar.gz -C /var/www/html/hdp<br>
+[root@master Downloads]# tar -zxvf HDP-UTILS-1.1.0.21-centos7.tar.gz -C /var/www/html/hdp</p>
+<p>#creat repo<br>
+[root@master Downloads]# cd /var/www/html/ambari/<br>
+[root@master ambari]# createrepo ./</p>
+<p>[root@master Downloads]# cd /etc/yum.repos.d/<br>
+[root@master yum.repos.d]# ls<br>
+CentOS7-Base-163.repo    CentOS-Debuginfo.repo  CentOS-Sources.repo<br>
+CentOS-Base.repo.backup  CentOS-fasttrack.repo  CentOS-Vault.repo<br>
+CentOS-CR.repo           CentOS-Media.repo</p>
+<h2 id="rootmaster-yumreposd-wget-nv-httppublic-repo-1hortonworkscomambaricentos72xupdates2503ambarireporootmaster-yumreposd-vim-ambarirepo">[root@master yum.repos.d]# wget -nv http://public-repo-1.hortonworks.com/ambari/centos7/2.x/updates/2.5.0.3/ambari.repo<br>
+[root@master yum.repos.d]# vim ambari.repo</h2>
+<h2 id="version_number2503-7ambari-2503nameambari-version-ambari-2503baseurlhttpmasterambariambaricentos7gpgcheck0gpgkeyhttpmasterambariambaricentos7rpm-gpg-keyrpm-gpg-key-jenkinsenabled1priority1">#VERSION_NUMBER=2.5.0.3-7<br>
+[ambari-2.5.0.3]<br>
+name=ambari Version - ambari-2.5.0.3<br>
+baseurl=http://master/ambari/ambari/centos7/<br>
+gpgcheck=0<br>
+gpgkey=http://master/ambari/ambari/centos7/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins<br>
+enabled=1<br>
+priority=1</h2>
+<h2 id="rootmaster-yumreposd-wget-nv-httppublic-repo-1hortonworkscomhdpcentos72xupdates2603hdpreporootmaster-yumreposd-vim-hdprepo">[root@master yum.repos.d]# wget -nv http://public-repo-1.hortonworks.com/HDP/centos7/2.x/updates/2.6.0.3/hdp.repo<br>
+[root@master yum.repos.d]# vim hdp.repo</h2>
+<p>#VERSION_NUMBER=2.6.0.3-8<br>
+[HDP-2.6.0.3]<br>
+name=HDP Version - HDP-2.6.0.3<br>
+baseurl=http://master/hdp/HDP/centos7/<br>
+gpgcheck=0<br>
+gpgkey=http://master/hdp/HDP/centos7/HDP/centos7/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins<br>
+enabled=1<br>
+priority=1</p>
+<h2 id="hdp-utils-11021namehdp-utils-version-hdp-utils-11021baseurlhttpmasterhdpgpgcheck0gpgkeyhttpmasterhdprpm-gpg-keyrpm-gpg-key-jenkinsenabled1priority1">[HDP-UTILS-1.1.0.21]<br>
+name=HDP-UTILS Version - HDP-UTILS-1.1.0.21<br>
+baseurl=http://master/hdp/<br>
+gpgcheck=0<br>
+gpgkey=http://master/hdp/RPM-GPG-KEY/RPM-GPG-KEY-Jenkins<br>
+enabled=1<br>
+priority=1</h2>
+<h1 id="yum-clean-list">yum clean list</h1>
+<h1 id="yum-update-list">yum update list</h1>
+<h1 id="yum-makecache">yum makecache</h1>
+<h1 id="yum-repolist">yum repolist</h1>
+<p></code></pre></p>
+<h3 id="11-check-masterhdp-and-masterambariambaricentos7">11. Check master/hdp/ and master/ambari/ambari/centos7/</h3>
+<figure data-type="image" tabindex="2"><img src="https://lxykyle01.github.io//post-images/1575807573478.jpg" alt=""></figure>
+<h3 id="12-install-mysql">12. Install MySQL</h3>
+<pre><code class="language-vb"># wget http://repo.mysql.com/mysql57-community-release-el7-8.noarch.rpm
+# rpm -ivh mysql57-community-release-el7-8.noarch.rpm  --nodeps --force
+# cd /etc/yum.repos.d
+# ls -l
+# yum install -y mysql-server
+# systemctl start mysqld
+# service mysqld status
+# grep 'temporary password' /var/log/mysqld.log  #It will return a random password
+<h1 id="mysql-u-root-p">mysql -u root -p</h1>
+<p>mysql&gt; Enter password: # type the random passwor you got before<br>
+mysql&gt; set global validate_password_policy=0;<br>
+mysql&gt; set global validate_password_length=4;<br>
+mysql&gt; alter user 'root'@'localhost' identified by 'root-1234'; #Set your own password to replace root-1234<br>
+mysql&gt; flush privileges;<br>
+mysql&gt; quit;</p>
+<h1 id="mysql-u-root-p-type-the-password-you-set-before">mysql -u root -p  # type the password you set before</h1>
+<p>mysql&gt; GRANT ALL PRIVILEGES ON <em>.</em> TO 'root'@'%' IDENTIFIED BY ' root-1234' WITH GRANT OPTION;<br>
+mysql&gt; FLUSH PRIVILEGES;</p>
+<h1 id="yum-install-y-mysql-connector-java">yum install -y mysql-connector-java</h1>
+<p>mysql&gt; create database ambari character set utf8;<br>
+mysql&gt; CREATE USER 'ambari'@'%' IDENTIFIED BY 'ambari-1234'; #Set your own password to replace ambari-1234<br>
+mysql&gt; GRANT ALL PRIVILEGES ON <em>.</em> TO 'ambari'@'%';<br>
+mysql&gt; FLUSH PRIVILEGES;</p>
+<p>mysql&gt; create database hive character set utf8;<br>
+mysql&gt; CREATE USER 'hive'@'%' IDENTIFIED BY 'hive-1234';  #Set your own password to replace hive-1234<br>
+mysql&gt; GRANT ALL PRIVILEGES ON <em>.</em> TO 'hive'@'%';<br>
+mysql&gt; FLUSH PRIVILEGES;<br>
+</code></pre></p>
+<h3 id="13-install-ambari">13. Install Ambari</h3>
+<pre><code class="language-vb"># yum install -y ambari-server
+# mysql -uroot -p
+<p>mysql&gt; use ambari;<br>
+mysql&gt; source /var/lib/ambari-server/resources/Ambari-DDL-MySQL-CREATE.sql;</p>
+<h1 id="ambari-server-setup">ambari-server setup</h1>
+<hr>
+<p>Customize user account for ambari-server daemon [y/n] (n)? y<br>
+Enter user account for ambari-server daemon (root): root<br>
+Adjusting ambari-server permissions and ownership...<br>
+Checking JDK...Do you want to change Oracle JDK [y/n] (n)? y</p>
+<p>[1] Oracle JDK 1.8 + Java Cryptography Extension (JCE) Policy Files 8<br>
+[2] Oracle JDK 1.7 + Java Cryptography Extension (JCE) Policy Files 7<br>
+[3] Custom JDK</p>
+<p>==========================================</p>
+<p>Enter choice (1): 3</p>
+<h1 id="java_homeusrlocaljdk8jdk180_231configuring-databaseenter-advanced-database-configuration-yn-n-yconfiguring-database">JAVA_HOME=usr/local/jdk8/jdk1.8.0_231/<br>
+Configuring database...Enter advanced database configuration [y/n] (n)? y<br>
+Configuring database...</h1>
+<p>Choose one of the following options:</p>
+<p>[1] - PostgreSQL (Embedded)<br>
+[2] - Oracle<br>
+[3] - MySQL<br>
+[4] - PostgreSQL<br>
+[5] - Microsoft SQL Server (Tech Preview)<br>
+[6] - SQL Anywhere</p>
+<p>==========================================</p>
+<p>Enter choice (1): 3</p>
+<h2 id="hostname-localhost-ambariserverport-3306database-name-ambariusername-ambarienter-database-password-ambari-1234password-you-set-before">Hostname (localhost): ambari.server<br>
+Port (3306):<br>
+Database name (ambari):<br>
+Username (ambari):<br>
+Enter Database Password (ambari-1234):#password you set before</h2>
+<p></code></pre></p>
+<h3 id="14-start-ambari">14. Start Ambari</h3>
+<pre><code class="language-vb"># ambari-server start
+</code></pre>
+<p>http://master:8080/#/login #USE firefox to open it</p>
+<p>Username:admin<br>
+Password:admin</p>
+<figure data-type="image" tabindex="3"><img src="https://lxykyle01.github.io//post-images/1575808895486.jpg" alt=""></figure>
+<p>Type cluster name: any name your want</p>
+<p>Chose HDP-2.6(Defaut Version)<br>
+Use local Repository</p>
+<figure data-type="image" tabindex="4"><img src="https://lxykyle01.github.io//post-images/1575809038377.jpg" alt=""></figure>
+<p>Target Hosts :Paste both master and node FQDN hostname here</p>
+<p>For ssh private key: chose id_rsa from /root/.ssh(It is a hide file,you need click show hide files)</p>
+<p>Next</p>
+<p>Find : SSLError:Failed to connect.Please check openssl library versions.</p>
+<p>Use below set for both master and node</p>
+<pre><code class="language-vb">vim /etc/python/cert-verification.cfg
+<p>[https]<br>
+verify=disable</p>
+<p>vim /etc/ambari-agent/ambari-agent</p>
+<p>[security]<br>
+force_https_protocol=PROTOCOL_TLSv1_2</p>
+<h1 id="service-ambari-server-restart">service ambari-server restart</h1>
+<p></code></pre></p>
+<p>And restart the webpage to retry before steps.</p>
+<pre><code>    &lt;/div&gt;
+
+    
+      &lt;a class=&quot;animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 &quot; href=&quot;https://lxykyle01.github.io//tag/JRtnuz_Nf&quot;&gt;
+        &lt;span class=&quot;flex-auto&quot;&gt;Ambari&lt;/span&gt;
+      &lt;/a&gt;
+    
+
+
+    &lt;div class=&quot;flex justify-between py-8&quot;&gt;
+      
+        &lt;div class=&quot;prev-post&quot;&gt;
+          &lt;a href=&quot;https://lxykyle01.github.io//post/a-comparison-of-distributed-machine-learning-platforms&quot;&gt;
+            &lt;h3 class=&quot;post-title&quot;&gt;
+              &lt;i class=&quot;remixicon-arrow-left-line&quot;&gt;&lt;/i&gt;
+              Principles of a Distributed Deep Learning Framework
+            &lt;/h3&gt;
+          &lt;/a&gt;
+        &lt;/div&gt;
+      
+
+      
+    &lt;/div&gt;
+
+    
+
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>http://localhost:4000/post/hello-gridea</id>
+        <link href="http://localhost:4000/post/hello-gridea">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="http://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>
