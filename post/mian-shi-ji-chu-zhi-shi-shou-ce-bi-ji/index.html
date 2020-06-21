@@ -31,30 +31,21 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            ASAP
+            Catalog
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1-%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86">1. 算法基础知识</a>
+<ul>
+<li><a href="#%E5%8F%8C%E6%8C%87%E9%92%88%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E4%B8%A4%E4%B8%AA%E6%8C%87%E9%92%88%E6%8C%87%E5%90%91%E4%B8%8D%E5%90%8C%E7%9A%84%E5%85%83%E7%B4%A0%E5%8D%8F%E5%90%8C%E5%AE%8C%E6%88%90%E4%BB%BB%E5%8A%A1">双指针(遍历数组，两个指针指向不同的元素，协同完成任务)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
           </div>
         </div>
       
@@ -98,18 +89,50 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="text-lg text-gray-700 mb-8">
-          <i class="remixicon-bookmark-2-line"></i> Tag Cloud
-        </h2>
-        <div class="tags-container">
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">面试基础知识手册笔记</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2020-02-09 / 1 min read
+        </div>
+        
+        <div class="post-content yue">
+          <h2 id="1-算法基础知识">1. 算法基础知识</h2>
+<h3 id="双指针遍历数组两个指针指向不同的元素协同完成任务">双指针(遍历数组，两个指针指向不同的元素，协同完成任务)</h3>
+<p>（1）java数组的声明</p>
+<pre><code class="language-java"> dataType[] arrayRefVar;
+</code></pre>
+<pre><code>      ``` java
+      dataType[] arrayRefVar = new dataType[arraySize]; 
+      ```
+      数组编码从0开始，遍历数组时要注意遍历取值到 Array.length - 1 
+      ``` java  
+      for (int i = 0; i &lt; myList.length; i++) {
+     System.out.println(myList[i] + &quot; &quot;);
+  }
+     ```</code></pre>
+
+        </div>
+
+        
+
+
+        <div class="flex justify-between py-8">
           
-            <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://lxykyle01.github.io/tag/VaCVr76UU" :style="{ 'animation-delay': `${0 * 0.2}s` }">
-              <span class="flex-auto">Gridea</span>
-              <span class="flex rounded-full bg-gray-200 px-2 py-1 text-xs ml-1">1</span>
-            </a>
+
+          
+            <div class="next-post">
+              <a href="https://lxykyle01.github.io/post/smart-home-project">
+                <h3 class="post-title">
+                  Smart Home Project
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
+
+        
+
       </div>
     </div>
 
