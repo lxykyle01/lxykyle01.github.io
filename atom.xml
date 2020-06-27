@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lxykyle01.github.io/</id>
     <title>MY SITE</title>
-    <updated>2020-06-21T23:08:12.080Z</updated>
+    <updated>2020-06-27T16:42:11.383Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lxykyle01.github.io/"/>
     <link rel="self" href="https://lxykyle01.github.io/atom.xml"/>
@@ -11,9 +11,145 @@
     <icon>https://lxykyle01.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MY SITE</rights>
     <entry>
+        <title type="html"><![CDATA[几种常见的句内关系]]></title>
+        <id>https://lxykyle01.github.io/post/ji-chong-chang-jian-de-ju-nei-guan-xi/</id>
+        <link href="https://lxykyle01.github.io/post/ji-chong-chang-jian-de-ju-nei-guan-xi/">
+        </link>
+        <updated>2020-06-26T21:57:30.000Z</updated>
+        <content type="html"><![CDATA[<p>几种常见的句内关系</p>
+<ul>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Parallelism</span><br>
+<span class="note"
+style="display: inline-block; color: rgb(136, 136, 136); line-height: 22px; min-height: 22px; font-size: 14px; padding-bottom: 2px;">Must<br>
+be structurally and logically<br>
+similar平行结构必须具有相同的结构形式和平行的逻辑关系​</span>
+<ul>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Root<br>
+phrase</span><br>
+<span class="note"
+style="display: inline-block; color: rgb(136, 136, 136); line-height: 22px; min-height: 22px; font-size: 14px; padding-bottom: 2px;">Parallelism<br>
+element started by root phrase​</span></li>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Parallelism<br>
+Markers</span>
+<ul>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">OPEN</span><br>
+<span class="note"
+style="display: inline-block; color: rgb(136, 136, 136); line-height: 22px; min-height: 22px; font-size: 14px; padding-bottom: 2px;">with<br>
+a word between two parallel element</span>
+<ul>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">★<br>
+And</span></li>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">★<br>
+Or</span></li>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">★<br>
+But </span></li>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Rather<br>
+than</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">CLOSE</span><br>
+<span class="note"
+style="display: inline-block; color: rgb(136, 136, 136); line-height: 22px; min-height: 22px; font-size: 14px; padding-bottom: 2px;">with<br>
+a word between two parallel element and also a word before<br>
+first element​</span>
+<ul>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Both...and;<br>
+Ether...or;Nor..but;Not only..but also;From...to</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Parallel<br>
+Elements</span>
+<ul>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Nouns</span></li>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Adj.</span></li>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Working<br>
+verbs</span></li>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Infinitive<br>
+verbs(to do)</span></li>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Participle<br>
+Modifiers(分词)</span></li>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Prepositional<br>
+Phrases</span></li>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Subordinate<br>
+Clauses(从句)</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Idoioms<br>
+with built-in parallel structure</span></li>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Parallel<br>
+Meaning</span>
+<ul>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Was;is...</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Comparisons</span><br>
+<span class="note"
+style="display: inline-block; color: rgb(136, 136, 136); line-height: 22px; min-height: 22px; font-size: 14px; padding-bottom: 2px;">Follow<br>
+the same rules of parallelismBut need to be the same kind of<br>
+things​</span>
+<ul>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Comparition<br>
+Markers</span>
+<ul>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Like;Unlike;As;Than;Different<br>
+from;In contract to/with</span></li>
+</ul>
+</li>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Omitted<br>
+Words</span><br>
+<span class="note"
+style="display: inline-block; color: rgb(136, 136, 136); line-height: 22px; min-height: 22px; font-size: 14px; padding-bottom: 2px;">在不产生歧义的情况下，Y的部分内容可以被省略（名词，动词，甚至整个句子）​​</span></li>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Like<br>
+VS AS</span>
+<ul>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Like<br>
+只能比较名词和名词短语；不能接介词短语和句子</span></li>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">AS可以被用来比较两个句子，也可以比较名词</span></li>
+<li><span class="content mubu-node"
+style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">两者在比较名词的时候，意思没有差别</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[面试基础知识手册笔记]]></title>
-        <id>https://lxykyle01.github.io/post/mian-shi-ji-chu-zhi-shi-shou-ce-bi-ji</id>
-        <link href="https://lxykyle01.github.io/post/mian-shi-ji-chu-zhi-shi-shou-ce-bi-ji">
+        <id>https://lxykyle01.github.io/post/mian-shi-ji-chu-zhi-shi-shou-ce-bi-ji/</id>
+        <link href="https://lxykyle01.github.io/post/mian-shi-ji-chu-zhi-shi-shou-ce-bi-ji/">
         </link>
         <updated>2020-02-09T05:11:53.000Z</updated>
         <content type="html"><![CDATA[<h2 id="1-算法基础知识">1. 算法基础知识</h2>
@@ -33,34 +169,34 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Smart Home Project]]></title>
-        <id>https://lxykyle01.github.io/post/smart-home-project</id>
-        <link href="https://lxykyle01.github.io/post/smart-home-project">
-        </link>
-        <updated>2019-12-29T12:04:15.000Z</updated>
-        <content type="html"><![CDATA[<iframe width='1200' height='1000' frameborder="0"src='https://www.jianguoyun.com/p/DfOD3dcQ4emvBxirhLsC'></iframe>
-]]></content>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[International Business Project]]></title>
-        <id>https://lxykyle01.github.io/post/international-business-project</id>
-        <link href="https://lxykyle01.github.io/post/international-business-project">
+        <id>https://lxykyle01.github.io/post/international-business-project/</id>
+        <link href="https://lxykyle01.github.io/post/international-business-project/">
         </link>
         <updated>2019-12-29T05:06:17.000Z</updated>
         <content type="html"><![CDATA[ <iframe width='1000' height='1000' frameborder="0"src='https://www.jianguoyun.com/p/DfaWtJsQ4emvBxjS_7oC'></iframe>]]></content>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Smart Home Project]]></title>
+        <id>https://lxykyle01.github.io/post/smart-home-project/</id>
+        <link href="https://lxykyle01.github.io/post/smart-home-project/">
+        </link>
+        <updated>2019-12-29T05:04:15.000Z</updated>
+        <content type="html"><![CDATA[<iframe width='1000' height='1000' frameborder="0"src='https://www.jianguoyun.com/p/DfOD3dcQ4emvBxirhLsC'></iframe>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[IoT Project]]></title>
-        <id>https://lxykyle01.github.io/post/iot-project</id>
-        <link href="https://lxykyle01.github.io/post/iot-project">
+        <id>https://lxykyle01.github.io/post/iot-project/</id>
+        <link href="https://lxykyle01.github.io/post/iot-project/">
         </link>
         <updated>2019-12-29T05:03:02.000Z</updated>
         <content type="html"><![CDATA[<iframe width='1000' height='1000' frameborder="0"src='https://www.jianguoyun.com/p/DX7JL5kQ4emvBxje_7oC'></iframe>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Useful Links]]></title>
-        <id>https://lxykyle01.github.io/post/useful-links</id>
-        <link href="https://lxykyle01.github.io/post/useful-links">
+        <id>https://lxykyle01.github.io/post/useful-links/</id>
+        <link href="https://lxykyle01.github.io/post/useful-links/">
         </link>
         <updated>2019-12-28T21:57:47.000Z</updated>
         <content type="html"><![CDATA[<div class="post-content yue">
@@ -85,8 +221,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[How to Deploy Hadoop with Ambari]]></title>
-        <id>https://lxykyle01.github.io/post/ambari</id>
-        <link href="https://lxykyle01.github.io/post/ambari">
+        <id>https://lxykyle01.github.io/post/ambari/</id>
+        <link href="https://lxykyle01.github.io/post/ambari/">
         </link>
         <updated>2019-12-23T15:40:58.000Z</updated>
         <content type="html"><![CDATA[<h3 id="1-build-two-vmcentos-7">1. BUILD TWO VM(CentOS 7)</h3>
@@ -365,8 +501,8 @@ force_https_protocol=PROTOCOL_TLSv1_2
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://lxykyle01.github.io/post/hello-gridea</id>
-        <link href="https://lxykyle01.github.io/post/hello-gridea">
+        <id>https://lxykyle01.github.io/post/hello-gridea/</id>
+        <link href="https://lxykyle01.github.io/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
